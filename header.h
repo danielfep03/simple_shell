@@ -21,7 +21,8 @@ void _error(int count_w, char *array[]);
 
 /* get_env */
 int _print_env(char *buffer);
-
+char *_getenv(char *name);
+int _getline(char **buffer, size_t *bufsize, int fd);
 
 /* str_manipulation*/
 char **_split_string(char *str, char *delim);
@@ -36,5 +37,12 @@ int _exec(int count_w, char *token, char *array[]);
 /* str_man */
 char *_itoa(int count_w);
 char *_string_directory(char **argv);
+char *_hack_path(char *path);
+
+/* pro */
+
+char *_memset(char *s, char b, unsigned int n);
+char *_memcpy(char *dest, char *src, unsigned int n);
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
 #endif
