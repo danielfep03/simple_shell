@@ -1,0 +1,41 @@
+.TH hsh 3 "25 November 2020" "GNU" "hsh Man Page"
+
+.SH NAME
+.B Simple Shell
+
+- A custom made bash command that replicates what the sh command in the bash does. It creates a command line interpreter that executes commands read from a terminal or a file.
+
+.SH SYNOPSIS
+.B  ./hsh
+.I (no options yet)
+
+.SH DESCRIPTION
+Is a command language interpreter that executes commands read from standard input.
+
+.SH OVERVIEW
+Reading from either the terminal or files, simple_shell interprets and executes commands.
+
+.SH INVOCATION
+
+Compile simple_shell with the GNU Compiler Collection, preferably using gcc plus the below specified flags, as per this example (note the use of the * wildcard which enables all related .c files to be compiled concurrently):
+.P
+.RS
+.B $ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+.P
+.RE
+simple_shell can be run in interactive mode by entering the below command on the command line followd by "enter." Note that the prompt ('$') will appear and you will then be in interactive mode and able to enter commands followed by "enter." 
+.P
+.RS
+.B $ ./hsh
+.P
+.RE
+simple_shell can be run in non-interactive mode through the use of shell scripts. This can involve the use of piping ('|'):
+.P
+.RS
+.B echo 'pwd' | ./hsh
+
+.SH AUTHOR
+Daniel Amado <danielfep.am@gmail.com>
+
+.SH SEE ALSO
+sh
